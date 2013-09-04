@@ -1,0 +1,60 @@
+/*
+*/
+div.infobar {
+	display: none;
+}
+
+div.infobar  > div.up-triangle {
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: SkyBlue;
+	border-left-color: transparent;
+	border-style: solid;
+	border-width: 0 15px 15px 15px;
+	height: 0;
+	width: 0;
+	font-size: 1px; /*for IE*/
+}
+
+div.infobar  > div.down-triangle {
+	border-top-color: SkyBlue;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
+	border-style: solid;
+	border-width: 15px 15px 0 15px;
+	height: 0;
+	width: 0;
+	font-size: 1px; /*for IE*/
+}
+
+div.infobar  > div.frame {
+	border: 3px solid;
+	border-color: SkyBlue;
+	border-radius: 7px;
+	height: ;
+}
+
+div.infobar  > div.frame > div.title {
+	padding: 5px 10px;
+	background: SkyBlue;
+	
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 20px;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+div.infobar  > div.frame  > div.title  > div.close {
+	float: right;
+	cursor: pointer;
+	color: grey;
+	text-shadow: 0 1px 0 white;
+}
+div.infobar  > div.frame  > div.title  > div.close:hover {
+	color: black;
+}
+
+div.infobar  > div.frame  > div.content {
+	padding: 10px;
+}

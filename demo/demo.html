@@ -1,0 +1,128 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
+<html>
+
+<head>
+	<title>Blade Info Bar Demo</title>
+	
+	<!-- style -->
+	<link rel="stylesheet" href="../jquery.blade-infobar.css">
+</head>
+
+<body>
+	<br>Example 1 (bar below):
+	<div id="eg1" style="border:1px solid;padding:5px;">
+	
+		<div class="btngrp">
+			<button
+				data-toggle="infobar" 
+				bar-id="#infobar-1" 
+				bar-title="show text" 
+				bar-contenttype="text"
+				bar-content='<span style="color:red">content</span>'
+			>
+				show text
+			</button>
+			<button
+				data-toggle="infobar" 
+				bar-id="#infobar-1" 
+				bar-title="show html" 
+				bar-contenttype="html"
+				bar-content='<span style="color:red">content</span>'
+			>
+				show html
+			</button>
+			<button
+				data-toggle="infobar" 
+				bar-id="#infobar-1" 
+				bar-title="show ajax" 
+				bar-contenttype="ajax"
+				bar-content="./ajax.txt"
+			>
+				show ajax
+			</button>
+			event: <span class="event"></span>
+		</div>
+	
+		<div id="infobar-1" class="infobar"></div>
+		
+		
+	</div>
+	
+	<br>Example 2 (bar upper):
+	<div id="eg2" style="border:1px solid;padding:5px;">
+	
+		<div id="infobar-2" class="infobar"></div>
+		
+		<div class="btngrp">
+			<a
+				href="#"
+				data-toggle="infobar" 
+				bar-id="#infobar-2" 
+				bar-title="show text" 
+				bar-contenttype="text"
+				bar-content='<span style="color:blue">content</span>'
+			>show text</a>,
+			<a
+				href="#"
+				data-toggle="infobar" 
+				bar-id="#infobar-2" 
+				bar-title="show html" 
+				bar-contenttype="html"
+				bar-content='<span style="color:blue">content</span>'
+			>show html</a>,
+			<a
+				href="#"
+				data-toggle="infobar" 
+				bar-id="#infobar-2" 
+				bar-title="show ajax" 
+				bar-contenttype="ajax"
+				bar-content="./ajax.txt"
+			>show ajax</a>,
+			event: <span class="event"></span>
+		</div>
+		
+	</div>
+</body>
+
+<script src="dependency/jquery-1.9.1.min.js"></script>
+<script src="../jquery.blade-infobar.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//init
+		$('div#infobar-1.infobar').bladeInfoBar({
+			width: 350
+		});
+		$('div#infobar-2.infobar').bladeInfoBar({
+			width: 400
+			, arrow: 'down'
+			, color: 'lightgrey'
+		});
+		
+		//show
+		$('div#eg1 > div.btngrp > button').click(function() {
+			$(this).bladeInfoBar('show');
+		});
+		$('div#eg2 > div.btngrp > a').click(function() {
+			$(this).bladeInfoBar('show');
+		});
+		
+		//event
+		$('div#infobar-1.infobar').bind('shown', function() {
+			$('div#eg1 > div.btngrp > span.event').text('shown');
+		});
+		$('div#infobar-1.infobar').bind('hidden', function() {
+			$('div#eg1 > div.btngrp > span.event').text('hidden');
+		});
+		$('div#infobar-2.infobar').bind('shown', function() {
+			$('div#eg2 > div.btngrp > span.event').text('shown');
+		});
+		$('div#infobar-2.infobar').bind('hidden', function() {
+			$('div#eg2 > div.btngrp > span.event').text('hidden');
+		});
+	});
+</script>
+
+</html>
