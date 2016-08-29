@@ -6,4 +6,4 @@ Demo is in package.
 
 Demo Snapshot
 --------------
-![github](http://img0.ph.126.net/06h7tIGlwzHH4Dbs74I15Q==/3367285146489918801.png "blade-phasebar")
+![github](https://raw.githubusercontent.com/panfeng-pf/blade-infobar/master/snapshot/examples.png "blade-infobar")
