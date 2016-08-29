@@ -1,4 +1,9 @@
 /*
+ * Blade Information Bar - v1.0.0 - 2013-07-12
+ * jQuery Plug-in
+ * http://github.com/panfeng-pf/blade-infobar
+ * Copyright (c) 2013 Blade Pan; Licensed BSD
+ * Dependency: jQuery (test with jQuery v1.9.1)
 */
 div.infobar {
 	display: none;
